@@ -44,7 +44,7 @@ class BulkFileChanger:
 			if outpath['status'] == 400:
 				results.append(outpath['message'])
 			else:
-				response = self.change_filename(filepath, outpath)
+				response = self.change_filename(filepath, outpath['outpath'])
 				results.append(response['message'])
 
 		return results
